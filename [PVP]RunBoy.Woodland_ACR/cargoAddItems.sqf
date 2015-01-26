@@ -5,8 +5,9 @@
 	Description:
 	Adds items defined in Array by classname to the cargo.
 */
-private "_box";
+private "_box", "_random";
 _box = _this select 0;
+_random = floor random(100);
 if ( isServer ) then
 {
 	// item = [Item ClassName,amount,probability of spawning];
@@ -49,7 +50,6 @@ if ( isServer ) then
 		["1Rnd_SmokeBlue_Grenade_shell",1,55]
 	];
 	{
-		_random = floor random(100);
 		if ( _random < (_x select 2) ) then
 		{
 			_box addItemCargo [_x select 0,_x select 1];
@@ -72,7 +72,6 @@ if ( isServer ) then
 		];
 		
 		{
-			_random = floor random(100);
 			if ( _random < (_x select 2) ) then
 			{
 				_box addItemCargo [_x select 0,_x select 1];
