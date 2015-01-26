@@ -1,4 +1,9 @@
-sleep 0.5;
+// This script "initPlayerLocal.sqf" gets automatically executed. 
+// Executed locally when player joins mission (includes both mission start and JIP).
+
+// Wait Until server has initialized completely.
+if (isNil "serverInitialized") then { serverInitialized = false; };
+waitUntil {if(serverInitialized) exitWith {true};};
 
 if ( side player == west) then
 {
@@ -13,6 +18,8 @@ if ( side player == resistance) then
 	[] execVM "briefingInd.sqf"; //Load Briefing
 };
 
+waitUntil {time > 0};
+
 //////////////////////////////////////////////////////////////////////////////////
 //UAV Life Feed by extrem-gx BEGIN:
 // The UAV Menu is a custom menu, which can show every life feed from the two UAV types and the one UGV type. All UAVs/UGVs that have a name and in the init 
@@ -21,12 +28,8 @@ if ( side player == resistance) then
 // will be able to send their camera feed to any player.
 // In this mission only BLUFOR units can use the uav life feed.
 
-if (isNil "aUAV") then { aUAV = []; publicVariable "aUAV"; };
+player addAction["<t color='#1292E2'>UAV Menu</t>", "UAV\OpenUAVMenu.sqf"];			// Adds the UAV Menu to all players
 
-if ( side player == west ) then
-{
-	player addAction["<t color='#1292E2'>UAV Menu</t>", "UAV\OpenUAVMenu.sqf"];			// Adds the UAV Menu to all players
-};
 
 if ( hasInterface ) then
 {

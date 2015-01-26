@@ -1,10 +1,25 @@
-private ["_uav"];
+aUAVSideB = [];
+aUAVSideO = [];
+aUAVSideI = [];
 
-if (isServer) then
 {
-	_uav = _this select 0;
+	if ( side _x == west ) then
+	{
+		_arrayLength = count aUAVSideB;
+		aUAVSideB set [_arrayLength, _x];
+	};
+	
+	if ( side _x == east ) then
+	{
+		_arrayLength = count aUAVSideO;
+		aUAVSideO set [_arrayLength, _x];
+	};
+	
+	if ( side _x == resistance ) then
+	{
+		_arrayLength = count aUAVSideI;
+		aUAVSideI set [_arrayLength, _x];
+	};
+} forEach allUnitsUAV;
 
-	_arrayLength = count aUAV;
-	aUAV set [_arrayLength, (str _uav)];
-	publicVariable "aUAV";
-};
+uavsInitialized = true;

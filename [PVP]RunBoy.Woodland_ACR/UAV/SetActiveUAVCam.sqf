@@ -16,7 +16,13 @@ _selectedItem = _listBox lbText _index;
 //systemChat str _selectedItem;
 // lbClear _listBox;
 if ( isNil "_selectedItem") exitWith{};
-_uav = missionNamespace getVariable _selectedItem;
+{
+	if ( (str _x) == _selectedItem ) then
+	{
+		_uav = _x;
+	};
+} forEach aUAV;
+
 currentUAV = _uav;
 
 if ( !isNil "uavCam") then 												// Checking if a uavCam already exists and destroying it, to prevent unused cams.

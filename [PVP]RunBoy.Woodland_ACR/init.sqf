@@ -1,1 +1,0 @@
-END_TIME = 7200; //When mission should end in seconds.
