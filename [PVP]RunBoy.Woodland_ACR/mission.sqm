@@ -2977,6 +2977,7 @@ class Mission
 			age="UNKNOWN";
 			name="t_time";
 			expCond="ELAPSED_TIME > END_TIME  ";
+			expActiv="null = [""TIMEOUT""] execVM ""endMission.sqf""";
 			class Effects
 			{
 				track="LeadTrack03_F";
@@ -2988,7 +2989,8 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			name="t_failed_opfor";
-			expCond="(triggerActivated t_rescued) || (triggerActivated t_time)";
+			expCond="triggerActivated t_rescued";
+			expActiv="null = [""WEST""] execVM ""endMission.sqf""";
 			class Effects
 			{
 			};
@@ -3001,7 +3003,8 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			name="t_failed_blufor";
-			expCond="(triggerActivated t_dead) || (triggerActivated t_time)";
+			expCond="triggerActivated t_dead";
+			expActiv="null = [""EAST""] execVM ""endMission.sqf""";
 			class Effects
 			{
 			};
