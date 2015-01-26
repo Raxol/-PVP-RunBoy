@@ -40,20 +40,47 @@ class Header
 
 class CfgDebriefing
 {  
-	class End1
+	class endWestWin
 	{
-		title = "Mission Over";
-		subtitle = "";
-		description = "Mission Failed.";
+		title = "MISSION ACCOMPLISHED";
+		subtitle = "Hostage is save";
+		description = "You found and manage to save the hostage.";
 		backgroundPicture = "";
 		picture = "b_inf";
 		pictureColor[] = {0.0,0.3,0.6,1};
 	};
-	class End2
+	class endWestDefeat
 	{
-		title = "Mission Over";
-		subtitle = "";
-		description = "Mission Succeess!";
+		title = "MISSION FAILED";
+		subtitle = "Hostage is dead";
+		description = "The hostage got killed.";
+		backgroundPicture = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	class endEastWin
+	{
+		title = "MISSION ACCOMPLISHED";
+		subtitle = "Hostage is dead";
+		description = "You eliminated the hostage.";
+		backgroundPicture = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	class endEastDefeat
+	{
+		title = "MISSION FAILED";
+		subtitle = "Hostage is save";
+		description = "The hostage got extracted and is save.";
+		backgroundPicture = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	class endTimeout
+	{
+		title = "MISSION OVER";
+		subtitle = "You were to slow";
+		description = "You ran out of time";
 		backgroundPicture = "";
 		picture = "b_inf";
 		pictureColor[] = {0.0,0.3,0.6,1};
