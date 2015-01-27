@@ -381,9 +381,7 @@ class Mission
 				class Item0
 				{
 					position[]={3919.8501,105.02413,4097.3184};
-					placement=1750;
 					azimut=-54.350399;
-					offsetY=500;
 					id=7;
 					side="GUER";
 					vehicle="i_survivor_F";
@@ -394,6 +392,43 @@ class Mission
 					init="this addbackpack ""B_Parachute""; this addItem ""ItemCompass""; this assignItem ""ItemCompass"";";
 					syncId=7;
 					synchronizations[]={14,17};
+				};
+			};
+			class Waypoints
+			{
+				items=4;
+				class Item0
+				{
+					position[]={1683.2097,209.67841,3400.9849};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={4503.895,112.80695,2500.405};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item2
+				{
+					position[]={4151.3096,127.21977,4118.9009};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item3
+				{
+					position[]={1797.9063,194.63785,3464.7051};
+					type="CYCLE";
+					class Effects
+					{
+					};
+					showWP="NEVER";
 				};
 			};
 		};
@@ -1415,7 +1450,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=128;
+		items=129;
 		class Item0
 		{
 			position[]={465.07275,301.09644,6498.9727};
@@ -1946,8 +1981,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_17";
 		};
 		class Item54
 		{
@@ -1958,7 +1992,6 @@ class Mission
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
 			text="hiddenBox_1";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
 		};
 		class Item55
 		{
@@ -1969,7 +2002,6 @@ class Mission
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
 			text="hiddenBox_2";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
 		};
 		class Item56
 		{
@@ -1980,8 +2012,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_22";
 		};
 		class Item57
 		{
@@ -1992,7 +2023,6 @@ class Mission
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
 			text="hiddenBox_4";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
 		};
 		class Item58
 		{
@@ -2004,7 +2034,6 @@ class Mission
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
 			text="hiddenBox_5";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
 		};
 		class Item59
 		{
@@ -2016,7 +2045,6 @@ class Mission
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
 			text="hiddenBox_6";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
 		};
 		class Item60
 		{
@@ -2028,7 +2056,6 @@ class Mission
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
 			text="hiddenBox_7";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
 		};
 		class Item61
 		{
@@ -2040,7 +2067,6 @@ class Mission
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
 			text="hiddenBox_8";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
 		};
 		class Item62
 		{
@@ -2052,7 +2078,6 @@ class Mission
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
 			text="hiddenBox_9";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
 		};
 		class Item63
 		{
@@ -2064,7 +2089,6 @@ class Mission
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
 			text="hiddenBox_10";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
 		};
 		class Item64
 		{
@@ -2076,7 +2100,6 @@ class Mission
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
 			text="hiddenBox_11";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
 		};
 		class Item65
 		{
@@ -2098,7 +2121,6 @@ class Mission
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
 			text="hiddenBox_13";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
 		};
 		class Item67
 		{
@@ -2109,8 +2131,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3_1";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_26";
 		};
 		class Item68
 		{
@@ -2121,8 +2142,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3_2";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_25";
 		};
 		class Item69
 		{
@@ -2133,8 +2153,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3_3";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_24";
 		};
 		class Item70
 		{
@@ -2145,8 +2164,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3_4";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_23";
 		};
 		class Item71
 		{
@@ -2157,8 +2175,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3_5";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_21";
 		};
 		class Item72
 		{
@@ -2169,8 +2186,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3_6";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_20";
 		};
 		class Item73
 		{
@@ -2181,8 +2197,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3_7";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_19";
 		};
 		class Item74
 		{
@@ -2193,8 +2208,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3_8";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_34";
 		};
 		class Item75
 		{
@@ -2205,8 +2219,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3_9";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_31";
 		};
 		class Item76
 		{
@@ -2217,8 +2230,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3_10";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_32";
 		};
 		class Item77
 		{
@@ -2229,8 +2241,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3_11";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_33";
 		};
 		class Item78
 		{
@@ -2241,8 +2252,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3_12";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_28";
 		};
 		class Item79
 		{
@@ -2253,8 +2263,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3_13";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_29";
 		};
 		class Item80
 		{
@@ -2265,8 +2274,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3_14";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_30";
 		};
 		class Item81
 		{
@@ -2277,8 +2285,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_3_15";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_27";
 		};
 		class Item82
 		{
@@ -2714,8 +2721,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_1_1";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_14";
 		};
 		class Item125
 		{
@@ -2725,8 +2731,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_1_2";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_15";
 		};
 		class Item126
 		{
@@ -2736,8 +2741,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_1_3";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_18";
 		};
 		class Item127
 		{
@@ -2747,8 +2751,17 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_FIA_Support_F";
 			skill=0.60000002;
-			text="hiddenBox_1_4";
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this; null = [this] execVm ""cargoAddItems.sqf"";";
+			text="hiddenBox_16";
+		};
+		class Item128
+		{
+			position[]={3908.0176,105.21353,4104.4951};
+			azimut=-88.287399;
+			id=180;
+			side="EMPTY";
+			vehicle="Box_FIA_Support_F";
+			skill=0.60000002;
+			text="hiddenBox_35";
 		};
 	};
 	class Markers
