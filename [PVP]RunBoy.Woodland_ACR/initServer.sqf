@@ -81,6 +81,30 @@ publicVariable "END_TIME";
 	};
 };
 
+StartTimerBeacon = 
+{
+	if (isServer) then {
+		[] spawn 
+		{
+			ELAPSED_TIME_BEACON  = 0;
+			START_TIME_BEACON = diag_tickTime;
+			while {ELAPSED_TIME_BEACON < END_TIME_BEACON} do 
+			{
+				ELAPSED_TIME_BEACON = diag_tickTime - START_TIME_BEACON;
+				publicVariable "ELAPSED_TIME_BEACON";
+				sleep 1;
+			};
+			if( ELAPSED_TIME_BEACON > END_TIME_BEACON ) then
+			{
+				nul = execVM "beacon.sqf";
+				[] spawn StartTimerBeacon;
+			};
+		};
+	};
+};
+
+[] spawn StartTimerBeacon;
+
 serverInitialized = true;
 publicVariable "serverInitialized";
 // Apply Skill Parameter to AI Units
