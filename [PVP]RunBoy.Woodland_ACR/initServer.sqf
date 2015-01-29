@@ -2,6 +2,9 @@ private ["_exfillPos"];
 
 sleep 0.1;
 
+execVM "initMission.sqf";
+
+// Spawn AI script if Headless Client is not present
 if (isNil "HeadlessVariable") then
 {
 	execVM "script.sqf";
@@ -66,19 +69,23 @@ publicVariable "ready";
 END_TIME = 7200; //When mission should end in seconds.
 publicVariable "END_TIME";
 
-if (isServer) then {
-    [] spawn 
-    {
-        ELAPSED_TIME  = 0;
-        START_TIME = diag_tickTime;
-        while {ELAPSED_TIME < END_TIME} do 
-        {
-            ELAPSED_TIME = diag_tickTime - START_TIME;
-            publicVariable "ELAPSED_TIME";
-            sleep 1;
-        };
-    };
+[] spawn 
+{
+	ELAPSED_TIME  = 0;
+	START_TIME = diag_tickTime;
+	while {ELAPSED_TIME < END_TIME} do 
+	{
+		ELAPSED_TIME = diag_tickTime - START_TIME;
+		publicVariable "ELAPSED_TIME";
+		sleep 1;
+	};
 };
 
 serverInitialized = true;
 publicVariable "serverInitialized";
+// Apply Skill Parameter to AI Units
+_skill = "AISkill" call BIS_fnc_getParamValue;
+{
+	_x setSkill _skill;
+} forEach allUnits;
+
