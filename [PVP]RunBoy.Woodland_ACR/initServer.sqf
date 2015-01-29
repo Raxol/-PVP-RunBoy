@@ -1,3 +1,5 @@
+// This script "initServer.sqf" gets automatically executed. 
+// Executed only on server when mission is started.
 private ["_exfillPos"];
 
 sleep 0.1;
@@ -14,6 +16,11 @@ if (isNil "HeadlessVariable") then
 // Init Array for UAV Menu 
 if (isNil "aUAV") then { aUAV = []; publicVariable "aUAV"; };
 
+cargo1 addItemCargoGlobal ["ACRE_PRC148", 100];
+cargo2 addItemCargoGlobal ["ACRE_PRC148", 100];
+
+nul = execVM "cargoAddItems.sqf";
+
 // exfillNumber determining the exfill pos for survivor
 exfillNumber = floor(random 7);
 publicVariable "exfillNumber";
@@ -21,8 +28,6 @@ publicVariable "exfillNumber";
 rightTrigger = false;
 publicVariable "rightTrigger";
 
-cargo1 addItemCargoGlobal ["ACRE_PRC148", 100];
-cargo2 addItemCargoGlobal ["ACRE_PRC148", 100];
 
 switch (exfillNumber) do 
 {
@@ -68,6 +73,8 @@ publicVariable "ready";
 
 END_TIME = 7200; //When mission should end in seconds.
 publicVariable "END_TIME";
+END_TIME_BEACON = 30; //Interval of beacon.
+publicVariable "END_TIME_BEACON";
 
 [] spawn 
 {
