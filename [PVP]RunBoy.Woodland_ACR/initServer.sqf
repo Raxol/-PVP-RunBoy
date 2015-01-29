@@ -1,24 +1,29 @@
 sleep 0.5;
 
-if (isServer) then
+// 
+execVM "initMission.sqf";
+
+// Spawn AI script if Headless Client is not present
+if (isNil "HeadlessVariable") then
 {
-	if (isNil "HeadlessVariable") then
-	{
-		execVM "script.sqf";
-	};
-	execVM "initMission.sqf";
+	execVM "script.sqf";
 };
 
-if (isServer) then {
-    [] spawn 
-    {
-        ELAPSED_TIME  = 0;
-        START_TIME = diag_tickTime;
-        while {ELAPSED_TIME < END_TIME} do 
-        {
-            ELAPSED_TIME = diag_tickTime - START_TIME;
-            publicVariable "ELAPSED_TIME";
-            sleep 1;
-        };
-    };
+// Apply Skill Parameter to AI Units
+_skill = "AISkill" call BIS_fnc_getParamValue;
+{
+	_x setSkill _skill;
+} forEach allUnits;
+
+// Time left counter
+[] spawn 
+{
+	ELAPSED_TIME  = 0;
+	START_TIME = diag_tickTime;
+	while {ELAPSED_TIME < END_TIME} do 
+	{
+		ELAPSED_TIME = diag_tickTime - START_TIME;
+		publicVariable "ELAPSED_TIME";
+		sleep 1;
+	};
 };
