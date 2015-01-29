@@ -119,33 +119,6 @@ class CfgDebriefing
 		picture = "b_inf";
 		pictureColor[] = {0.0,0.3,0.6,1};
 	};
-	class endWestDefeat
-	{
-		title = "MISSION FAILED";
-		subtitle = "Hostage is dead";
-		description = "The hostage got killed.";
-		backgroundPicture = "";
-		picture = "b_inf";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
-	class endEastWin
-	{
-		title = "MISSION ACCOMPLISHED";
-		subtitle = "Hostage is dead";
-		description = "You eliminated the hostage.";
-		backgroundPicture = "";
-		picture = "b_inf";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
-	class endEastDefeat
-	{
-		title = "MISSION FAILED";
-		subtitle = "Hostage is save";
-		description = "The hostage got extracted and is save.";
-		backgroundPicture = "";
-		picture = "b_inf";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
 	class endTimeout
 	{
 		title = "MISSION OVER";
