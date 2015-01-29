@@ -12,6 +12,12 @@ if (isNil "HeadlessVariable") then
 	execVM "script.sqf";
 };
 
+// Apply Skill Parameter to AI Units
+_skill = "AISkill" call BIS_fnc_getParamValue;
+{
+	_x setSkill _skill;
+} forEach allUnits;
+
 //Sets the mission params
 // Init Array for UAV Menu 
 if (isNil "aUAV") then { aUAV = []; publicVariable "aUAV"; };
@@ -114,9 +120,3 @@ StartTimerBeacon =
 
 serverInitialized = true;
 publicVariable "serverInitialized";
-// Apply Skill Parameter to AI Units
-_skill = "AISkill" call BIS_fnc_getParamValue;
-{
-	_x setSkill _skill;
-} forEach allUnits;
-
