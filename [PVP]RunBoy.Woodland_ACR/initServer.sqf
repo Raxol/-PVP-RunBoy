@@ -40,7 +40,6 @@ publicVariable "exfillNumber";
 rightTrigger = false;
 publicVariable "rightTrigger";
 
-
 switch (exfillNumber) do 
 {
 	case 0: {
