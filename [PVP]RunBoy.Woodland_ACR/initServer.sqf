@@ -18,6 +18,12 @@ _skill = "AISkill" call BIS_fnc_getParamValue;
 	_x setSkill _skill;
 } forEach allUnits;
 
+// Apply Thermal Vision Parameter to AI Units
+_vision = if (("ThermalVision" call BIS_fnc_getParamValue) == 1) then {true;} else {false};
+{
+	_x disableTIEquipment _vision;
+} forEach vehicles;
+
 //Sets the mission params
 // Init Array for UAV Menu 
 if (isNil "aUAV") then { aUAV = []; publicVariable "aUAV"; };

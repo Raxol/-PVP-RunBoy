@@ -917,7 +917,7 @@ class Mission
 						items=9;
 						class Item0
 						{
-							value="600";
+							value="10";
 							parentCls="ModuleRespawnVehicle_F";
 							typeName="Delay";
 						};
@@ -935,7 +935,7 @@ class Mission
 						};
 						class Item3
 						{
-							value="";
+							value="[_this] execVM ""respawnVehicle.sqf""";
 							parentCls="ModuleRespawnVehicle_F";
 							typeName="Init";
 						};
