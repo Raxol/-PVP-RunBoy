@@ -26,9 +26,36 @@ class Params
 	class AISkill
 	{
 		title = "AI Skill"; // Param name visible in the list
-		values[] = {0.2,0.6,1}; // Values; must be integers; has to have the same number of elements as 'texts'
+		values[] = {0,1,2}; // Values; must be integers; has to have the same number of elements as 'texts'
 		texts[] = {"Recruit","Regular","Veteran"}; // Description of each selectable item
-		default = 0.6; // Default value; must be listed in 'values' array, otherwise 0 is used
+		default = 1; // Default value; must be listed in 'values' array, otherwise 0 is used
+	};
+	
+	class Beacon
+	{
+		title = "Survivor Beacon"; // Param name visible in the list
+		values[] = {0,1}; // Values; must be integers; has to have the same number of elements as 'texts'
+		texts[] = {"Disable","Enable"}; // Description of each selectable item
+		default = 1; // Default value; must be listed in 'values' array, otherwise 0 is used
+		isGlobal = 0;
+	};
+	
+	class BeaconDiameter
+	{
+		title = "Survivor Beacon Diameter"; // Param name visible in the list
+		values[] = {100,200,300,400,500,600,700,800,900,1000}; // Values; must be integers; has to have the same number of elements as 'texts'
+		texts[] = {"100","200","300","400","500","600","700","800","900","1000"}; // Description of each selectable item
+		default = 500; // Default value; must be listed in 'values' array, otherwise 0 is used
+		isGlobal = 0;
+	};
+	
+	class BeaconInterval
+	{
+		title = "Survivor Beacon Interval in Minutes"; // Param name visible in the list
+		values[] = {10,60,120,180,240,300,600,900,1200,1800}; // Values; must be integers; has to have the same number of elements as 'texts'
+		texts[] = {"T","1","2","3","4","5","10","15","20","30"}; // Description of each selectable item
+		default = 10; // Default value; must be listed in 'values' array, otherwise 0 is used
+		isGlobal = 0;
 	};
 	
 	class Daytime
@@ -65,8 +92,8 @@ class Params
 	{
 		title = "Thermal Vision in Vehicle"; // Param name visible in the list
 		values[] = {0,1}; // Values; must be integers; has to have the same number of elements as 'texts'
-		texts[] = {"Enable","Disable"}; // Description of each selectable item
-		default = 1; // Default value; must be listed in 'values' array, otherwise 0 is used
+		texts[] = {"Disable","Enable"}; // Description of each selectable item
+		default = 0; // Default value; must be listed in 'values' array, otherwise 0 is used
 		isGlobal = 0;
 	};
 };

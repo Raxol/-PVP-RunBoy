@@ -952,7 +952,7 @@ class Mission
 						items=9;
 						class Item0
 						{
-							value="10";
+							value="600";
 							parentCls="ModuleRespawnVehicle_F";
 							typeName="Delay";
 						};
@@ -2702,7 +2702,6 @@ class Mission
 		class Item123
 		{
 			position[]={1361.2465,85.385323,104.39072};
-			offsetY=200;
 			special="FLY";
 			id=175;
 			side="EMPTY";

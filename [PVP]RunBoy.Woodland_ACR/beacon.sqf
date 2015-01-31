@@ -5,7 +5,7 @@
 	Description:
 	Adds a marker to the map, which shows the pos of the survivor in a "_markerDiameter" diameter.
 */
-_markerDiameter = 500;
+_markerDiameter = "BeaconDiameter" call BIS_fnc_getParamValue;//500;
 
 _survivorPos = getPos survivor1;
 _x = (_survivorPos select 0) + (floor (random (_markerDiameter/2))) - (floor (random (_markerDiameter/2)));

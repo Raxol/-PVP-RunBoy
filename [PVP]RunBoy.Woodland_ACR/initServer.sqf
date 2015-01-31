@@ -13,7 +13,13 @@ if (isNil "HeadlessVariable") then
 };
 
 // Apply Skill Parameter to AI Units
-_skill = "AISkill" call BIS_fnc_getParamValue;
+_skill = 0.6;
+switch ("AISkill" call BIS_fnc_getParamValue) do
+{
+	case 0: { _skill = 0.2; };
+	case 1: { _skill = 0.6; };
+	case 2: { _skill = 1; };
+};
 {
 	_x setSkill _skill;
 } forEach allUnits;
@@ -21,7 +27,7 @@ _skill = "AISkill" call BIS_fnc_getParamValue;
 // Apply Thermal Vision Parameter to AI Units
 _vision = if (("ThermalVision" call BIS_fnc_getParamValue) == 1) then {true;} else {false};
 {
-	_x disableTIEquipment _vision;
+	_x disableTIEquipment (not _vision);
 } forEach vehicles;
 
 //Sets the mission params
@@ -84,8 +90,7 @@ publicVariable "ready";
 
 END_TIME = 7200; //When mission should end in seconds.
 publicVariable "END_TIME";
-END_TIME_BEACON = 30; //Interval of beacon.
-publicVariable "END_TIME_BEACON";
+END_TIME_BEACON = "BeaconInterval" call BIS_fnc_getParamValue;//30; //Interval of beacon.
 
 [] spawn 
 {
@@ -99,29 +104,9 @@ publicVariable "END_TIME_BEACON";
 	};
 };
 
-StartTimerBeacon = 
-{
-	if (isServer) then {
-		[] spawn 
-		{
-			ELAPSED_TIME_BEACON  = 0;
-			START_TIME_BEACON = diag_tickTime;
-			while {ELAPSED_TIME_BEACON < END_TIME_BEACON} do 
-			{
-				ELAPSED_TIME_BEACON = diag_tickTime - START_TIME_BEACON;
-				publicVariable "ELAPSED_TIME_BEACON";
-				sleep 1;
-			};
-			if( ELAPSED_TIME_BEACON > END_TIME_BEACON ) then
-			{
-				nul = execVM "beacon.sqf";
-				[] spawn StartTimerBeacon;
-			};
-		};
-	};
-};
+// Only spawn the function if the parameter is set to enable
+if (("Beacon" call BIS_fnc_getParamValue) == 1) then { execVM "beaconTimer.sqf"; };
 
-[] spawn StartTimerBeacon;
 
 serverInitialized = true;
 publicVariable "serverInitialized";
