@@ -25,7 +25,7 @@ switch ("AISkill" call BIS_fnc_getParamValue) do
 } forEach allUnits;
 
 // Apply Thermal Vision Parameter to AI Units
-_vision = if (("ThermalVision" call BIS_fnc_getParamValue) == 1) then {true;} else {false};
+_vision = if (("ThermalVision" call BIS_fnc_getParamValue) == 0) then {true;} else {false};
 {
 	_x disableTIEquipment (not _vision);
 } forEach vehicles;
