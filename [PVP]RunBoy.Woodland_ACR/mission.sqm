@@ -381,7 +381,9 @@ class Mission
 				class Item0
 				{
 					position[]={3919.8501,105.02413,4097.3184};
+					placement=1750;
 					azimut=-54.350399;
+					offsetY=500;
 					id=7;
 					side="GUER";
 					vehicle="i_survivor_F";
@@ -1048,7 +1050,7 @@ class Mission
 						};
 						class Item3
 						{
-							value="";
+							value="[_this] execVM ""respawnVehicle.sqf""";
 							parentCls="ModuleRespawnVehicle_F";
 							typeName="Init";
 						};
