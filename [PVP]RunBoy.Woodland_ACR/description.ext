@@ -17,6 +17,11 @@ class CfgFunctions
                 postInit = 1;
                 file = "initHC.sqf";
             };
+			// class myFunction2
+			// {
+				// postInit = 1;
+                // file = "startTimer.sqf";
+			// };
         };
     };
 };
