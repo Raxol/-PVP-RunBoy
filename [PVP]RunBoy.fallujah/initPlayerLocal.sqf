@@ -55,29 +55,29 @@ onRscUAVLoad = {
 private ["_colorWest", "_colorEast"];
 _colorWest = [west] call BIS_fnc_sideColor;
 _colorEast = [east] call BIS_fnc_sidecolor;
-if ( side player != resistance) then
-{
+// if ( side player != resistance) then
+// {
 	
-	_SurvPos = getPos survivor1;
-	_SurvPos set [2,75];
-	//hint formatText["X: %1 Z: %2 Y: %3",_SurvPos select 0, _SurvPos select 1, _SurvPos select 2];
-	//sleep 5;
-	//starts the UAV orbiting above
-	[
-		_SurvPos,				//need to create a marker called BIS_establishingShot_center
-		BUL_UAVintro_Text,//spawns the text
-		400,//height
-		50,//radius
-		180,//angle
-		(random 1),//clockwise\anit-clock
-		[
-			["\A3\ui_f\data\map\markers\nato\b_inf.paa", _colorWest, getpos player, 1, 1, 0, "", 0],
-			["\A3\ui_f\data\map\markers\nato\o_hq.paa", _colorEast, getmarkerpos "OPFORHQ", 1, 1, 0, "OPFOR Base", 0],
-			["\A3\ui_f\data\map\mapcontrol\Transmitter_CA.paa", _colorWest, getmarkerpos "BLUFORHQ",  1, 1, 0, "BLUFOR HQ", 0]
-		],
-		0
-	] call BIS_fnc_establishingShot;
-};
+	// _SurvPos = getPos survivor1;
+	// _SurvPos set [2,75];
+	// //hint formatText["X: %1 Z: %2 Y: %3",_SurvPos select 0, _SurvPos select 1, _SurvPos select 2];
+	// //sleep 5;
+	// //starts the UAV orbiting above
+	// [
+		// _SurvPos,				//need to create a marker called BIS_establishingShot_center
+		// BUL_UAVintro_Text,//spawns the text
+		// 400,//height
+		// 50,//radius
+		// 180,//angle
+		// (random 1),//clockwise\anit-clock
+		// [
+			// ["\A3\ui_f\data\map\markers\nato\b_inf.paa", _colorWest, getpos player, 1, 1, 0, "", 0],
+			// ["\A3\ui_f\data\map\markers\nato\o_hq.paa", _colorEast, getmarkerpos "OPFORHQ", 1, 1, 0, "OPFOR Base", 0],
+			// ["\A3\ui_f\data\map\mapcontrol\Transmitter_CA.paa", _colorWest, getmarkerpos "BLUFORHQ",  1, 1, 0, "BLUFOR HQ", 0]
+		// ],
+		// 0
+	// ] call BIS_fnc_establishingShot;
+// };
 
 if (hasInterface) then
 {

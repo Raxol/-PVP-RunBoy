@@ -8,17 +8,7 @@ class CfgFunctions
 	#include "taw_vd\CfgFunctions.hpp"
 	#include "VAS\cfgfunctions.hpp"
 	
-	 class myTag
-    {
-        class myCategory
-        {        
-            class myFunction 
-            {
-                postInit = 1;
-                file = "initHC.sqf";
-            };
-        };
-    };
+	
 };
 
 class Params

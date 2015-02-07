@@ -7,10 +7,10 @@ sleep 0.1;
 execVM "initMission.sqf";
 
 // Spawn AI script if Headless Client is not present
-if (isNil "HeadlessVariable") then
-{
-	execVM "script.sqf";
-};
+// if (isNil "HeadlessVariable") then
+// {
+	// execVM "script.sqf";
+// };
 
 // Apply Skill Parameter to AI Units
 _skill = 0.6;
@@ -37,7 +37,7 @@ if (isNil "aUAV") then { aUAV = []; publicVariable "aUAV"; };
 cargo1 addItemCargoGlobal ["ACRE_PRC148", 100];
 cargo2 addItemCargoGlobal ["ACRE_PRC148", 100];
 
-nul = [100, (getPos rbs), 500] execVM "randomBoxSpawn.sqf";
+nul = [75, (getPos rbs), 2000] execVM "randomBoxSpawn.sqf";
 
 // exfillNumber determining the exfill pos for survivor
 exfillNumber = floor(random 7);
