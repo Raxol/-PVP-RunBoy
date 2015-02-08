@@ -60,7 +60,7 @@ if ( !isNil "_box" ) then
 	{
 		if ( _random < (_x select 2) ) then
 		{
-			_box addItemCargo [_x select 0,_x select 1];
+			_box addItemCargoGlobal [_x select 0,_x select 1];
 		};
 	} forEach _items;
 	
@@ -85,7 +85,7 @@ if ( !isNil "_box" ) then
 		{
 			if ( _random < (_x select 2) ) then
 			{
-				_box addItemCargo [_x select 0,_x select 1];
+				_box addItemCargoGlobal [_x select 0,_x select 1];
 			};
 		} forEach _agmItems;
 	};

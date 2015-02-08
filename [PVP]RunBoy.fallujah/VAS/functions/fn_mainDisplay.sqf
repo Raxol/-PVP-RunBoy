@@ -49,6 +49,7 @@ switch (_request) do
 					_control lbSetData [(lbSize _control)-1,(_details select 0)]; //Data for index is classname
 					_control lbSetValue [(lbSize _control)-1,(_details select 4)]; //Value for index is type
 					_control lbSetPicture [(lbSize _control)-1,(_details select 2)];
+					_control lbSetPictureColor [(lbSize _control)-1, [0,0,0,0]];
 				};
 			} foreach _info;
 		};
@@ -69,6 +70,7 @@ switch (_request) do
 					_control lbSetData [(lbSize _control)-1,(_details select 0)]; //Data for index is classname
 					_control lbSetValue [(lbSize _control)-1,(_details select 4)]; //Value for index is type
 					_control lbSetPicture [(lbSize _control)-1,(_details select 2)];
+					_control lbSetPictureColor [(lbSize _control)-1, [0,0,0,0]];
 				};
 			} foreach _info;
 		};
@@ -90,6 +92,7 @@ switch (_request) do
 					_control lbAdd format["%1", (_details select 1)]; //Displayname on list
 					_control lbSetData [(lbSize _control)-1,(_details select 0)]; //Data for index is classname
 					_control lbSetPicture [(lbSize _control)-1,(_details select 2)];
+					_control lbSetPictureColor [(lbSize _control)-1, [0,0,0,0]];
 				};
 			} foreach _info;
 		};
@@ -114,6 +117,7 @@ switch (_request) do
 						_control lbAdd format["[%1] %2",({_x == _mag} count _info),(_details select 1)]; //Displayname on list
 						_control lbSetData [(lbSize _control)-1,(_details select 0)]; //Data for index is classname
 						_control lbSetPicture [(lbSize _control)-1,(_details select 2)];
+						_control lbSetPictureColor [(lbSize _control)-1, [0,0,0,0]];
 					};
 				};
 			} foreach _info;
@@ -137,6 +141,7 @@ switch (_request) do
 					_control lbSetData [(lbSize _control)-1,(_details select 0)]; //Data for index is classname
 					_control lbSetValue [(lbSize _control)-1,(_details select 4)]; //Value for index is type
 					_control lbSetPicture [(lbSize _control)-1,(_details select 2)];
+					_control lbSetPictureColor [(lbSize _control)-1, [0,0,0,0]];
 				};
 			} foreach _info;
 		};
@@ -157,6 +162,7 @@ switch (_request) do
 					_control lbSetData [(lbSize _control)-1,(_details select 0)]; //Data for index is classname
 					_control lbSetValue [(lbSize _control)-1,(_details select 4)]; //Value for index is type
 					_control lbSetPicture [(lbSize _control)-1,(_details select 2)];
+					_control lbSetPictureColor [(lbSize _control)-1, [0,0,0,0]];
 				};
 			} foreach _info;
 		};
@@ -178,6 +184,7 @@ switch (_request) do
 					_control lbAdd format["%1", (_details select 1)]; //Displayname on list
 					_control lbSetData [(lbSize _control)-1,(_details select 0)]; //Data for index is classname
 					_control lbSetPicture [(lbSize _control)-1,(_details select 2)];
+					_control lbSetPictureColor [(lbSize _control)-1, [0,0,0,0]];
 				};
 			} foreach _info;
 		};
@@ -198,6 +205,7 @@ switch (_request) do
 					_control lbAdd format["%1", (_details select 1)]; //Displayname on list
 					_control lbSetData [(lbSize _control)-1,(_details select 0)]; //Data for index is classname
 					_control lbSetPicture [(lbSize _control)-1,(_details select 2)];
+					_control lbSetPictureColor [(lbSize _control)-1, [0,0,0,0]];
 				};
 			} foreach _info;
 		};
@@ -220,6 +228,7 @@ switch (_request) do
 					_control lbAdd format["%1", (_details select 1)]; //Displayname on list
 					_control lbSetData [(lbSize _control)-1,(_details select 0)]; //Data for index is classname
 					_control lbSetPicture [(lbSize _control)-1,(_details select 2)];
+					_control lbSetPictureColor [(lbSize _control)-1, [0,0,0,0]];
 				};
 			} foreach _info;
 		};
@@ -239,6 +248,7 @@ switch (_request) do
 					_control lbAdd format["%1", (_details select 1)]; //Displayname on list
 					_control lbSetData [(lbSize _control)-1,(_details select 0)]; //Data for index is classname
 					_control lbSetPicture [(lbSize _control)-1,(_details select 2)];
+					_control lbSetPictureColor [(lbSize _control)-1, [0,0,0,0]];
 				};
 			} foreach _info;
 		};

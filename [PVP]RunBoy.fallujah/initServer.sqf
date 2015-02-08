@@ -4,31 +4,11 @@ private ["_exfillPos"];
 
 sleep 0.1;
 
-execVM "initMission.sqf";
+// Set Time
+_minutes = "TimeMinutes" call BIS_fnc_getParamValue;
+_hours = "TimeHour" call BIS_fnc_getParamValue;
 
-// Spawn AI script if Headless Client is not present
-// if (isNil "HeadlessVariable") then
-// {
-	// execVM "script.sqf";
-// };
-
-// Apply Skill Parameter to AI Units
-_skill = 0.6;
-switch ("AISkill" call BIS_fnc_getParamValue) do
-{
-	case 0: { _skill = 0.2; };
-	case 1: { _skill = 0.6; };
-	case 2: { _skill = 1; };
-};
-{
-	_x setSkill _skill;
-} forEach allUnits;
-
-// Apply Thermal Vision Parameter to AI Units
-_vision = if (("ThermalVision" call BIS_fnc_getParamValue) == 0) then {true;} else {false};
-{
-	_x disableTIEquipment (not _vision);
-} forEach vehicles;
+setDate [2015, 4, 24, _hours, _minutes];
 
 //Sets the mission params
 // Init Array for UAV Menu 
@@ -37,7 +17,7 @@ if (isNil "aUAV") then { aUAV = []; publicVariable "aUAV"; };
 cargo1 addItemCargoGlobal ["ACRE_PRC148", 100];
 cargo2 addItemCargoGlobal ["ACRE_PRC148", 100];
 
-nul = [75, (getPos rbs), 2000] execVM "randomBoxSpawn.sqf";
+rbsSpawnHandle = [100, (getPos rbs), 2000] execVM "randomBoxSpawn.sqf";
 
 // exfillNumber determining the exfill pos for survivor
 exfillNumber = floor(random 7);
