@@ -42,14 +42,15 @@ class Mission
 	randomSeed=15107736;
 	class Intel
 	{
-		timeOfChanges=1800.0002;
+		briefingName="[PVP] Run Boy";
+		overviewText="Marines are searching a hostage. Takistan Army Soldiers are trying to kill the hostage.";
 		startWeather=0;
-		startWind=0.1;
-		startWaves=0.1;
+		startWind=0.099999994;
+		startWaves=0.099999994;
 		forecastWeather=0;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
 		year=2010;
 		month=1;
 		day=11;
@@ -365,7 +366,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="survivor1";
-					init="this addbackpack ""B_Parachute""; this addItem ""ItemCompass""; this assignItem ""ItemCompass"";";
+					init="_sl = [this] execVM ""survivorLoadout.sqf""";
 					syncId=7;
 					synchronizations[]={14,17};
 				};
@@ -724,7 +725,7 @@ class Mission
 					id=23;
 					side="WEST";
 					vehicle="CUP_B_FR_Soldier_TL";
-					player="PLAY CDG";
+					player="PLAYER COMMANDER";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
@@ -1360,7 +1361,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="cargo1";
-			init="this addAction[""<t color='#ff1111'>Virtual Ammobox</t>"", ""VAS\open.sqf""];";
+			init="0 = [""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal;";
 		};
 		class Item2
 		{
@@ -2111,7 +2112,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="cargo2";
-			init="this addAction[""<t color='#ff1111'>Virtual Ammobox</t>"", ""VAS\open.sqf""];";
+			init="0 = [""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal;";
 		};
 		class Item75
 		{

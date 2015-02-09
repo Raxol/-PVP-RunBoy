@@ -13,7 +13,7 @@ _random = floor random(100);
 // item = [Item ClassName,amount,probability of spawning];
 _items = 
 [
-	["ItemMap",1,90],
+	["ItemMap",1,80],
 	["Binocular",1,60],
 	["FirstAidKit",3,60], 
 	["30Rnd_9x21_Mag",1,45],
@@ -88,6 +88,19 @@ if ( !isNil "_box" ) then
 				_box addItemCargoGlobal [_x select 0,_x select 1];
 			};
 		} forEach _agmItems;
+	};
+	
+	// ACRE Radio
+	_currentVersion = getText (configFile >> "CfgPatches" >> "acre_sys_core" >> "version");
+	
+	if ( !isNil {_currentVersion} ) then
+	{
+		_prob = 5;
+		
+		if ( _random < _prob ) then
+		{
+			_box addItemCargoGlobal ["ACRE_PRC148",1];
+		};
 	};
 };
 

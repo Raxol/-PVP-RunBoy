@@ -1,6 +1,8 @@
 // This script "initPlayerLocal.sqf" gets automatically executed. 
 // Executed locally when player joins mission (includes both mission start and JIP).
 
+["Preload"] call BIS_fnc_arsenal;
+
 // Wait Until server has initialized completely.
 if (isNil "serverInitialized") then { serverInitialized = false; };
 waitUntil {if(serverInitialized) exitWith {true};};
@@ -28,7 +30,10 @@ waitUntil {time > 0};
 // will be able to send their camera feed to any player.
 // In this mission only BLUFOR units can use the uav life feed.
 
-player addAction["<t color='#1292E2'>UAV Menu</t>", "UAV\OpenUAVMenu.sqf"];			// Adds the UAV Menu to all players
+if (side player == west || side player == east) then 
+{
+	player addAction["<t color='#1292E2'>UAV Menu</t>", "UAV\OpenUAVMenu.sqf"];			// Adds the UAV Menu to all players
+};
 
 
 if ( hasInterface ) then
