@@ -1,6 +1,11 @@
-Version 1.1 by extrem-gx
+Version 1.1.1 by extrem-gx
 
 CHANGELOG:
+
+1.1.1 
+- Added: check if thermalVision is enabled.
+- Fixed: when button pressed "Set" and no Item was seleceted an error came. Now it just ignores it.
+
 
 1.1 
 
