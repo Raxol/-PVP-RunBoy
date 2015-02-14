@@ -366,7 +366,6 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="survivor1";
-					init="_sl = [this] execVM ""survivorLoadout.sqf""";
 					syncId=7;
 					synchronizations[]={14,17};
 				};
@@ -2329,7 +2328,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=12;
+		items=11;
 		class Item0
 		{
 			position[]={5632.8857,7,5032.1445};
@@ -2367,56 +2366,48 @@ class Mission
 		};
 		class Item3
 		{
-			position[]={3025.1191,6.9900088,6332.2285};
-			name="randrandr";
-			text="Refuel, repair and rearming";
-			type="loc_Fuelstation";
-			angle=76.900314;
-		};
-		class Item4
-		{
 			position[]={4576.1655,6.9900079,2315.1406};
 			name="respawn_west";
 			type="Empty";
 		};
-		class Item5
+		class Item4
 		{
 			position[]={4585.0068,6.9900079,2270.4087};
 			name="respawn_vehicle_west";
 			type="Empty";
 		};
-		class Item6
+		class Item5
 		{
 			position[]={3039.8054,6.9900088,6311.3882};
 			name="respawn_east";
 			type="Empty";
 		};
-		class Item7
+		class Item6
 		{
 			position[]={3058.7988,6.9900088,6359.042};
 			name="respawn_vehicle_east";
 			type="Empty";
 		};
-		class Item8
+		class Item7
 		{
 			position[]={5645.5396,7,5033.3945};
 			name="descriptionM_Jump";
 			text="Last Known Pos";
 			type="Faction_CUP_INDFOR";
 		};
-		class Item9
+		class Item8
 		{
 			position[]={5619.8364,7,5044.666};
 			name="BIS_establishingShot_center";
 			type="Empty";
 		};
-		class Item10
+		class Item9
 		{
 			position[]={3032.9934,6.9900088,6334.8003};
 			name="OPFORHQ";
 			type="Empty";
 		};
-		class Item11
+		class Item10
 		{
 			position[]={4569.1816,6.9900079,2332.9963};
 			name="BLUFORHQ";

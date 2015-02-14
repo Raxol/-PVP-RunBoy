@@ -1,21 +1,21 @@
-comment "Exported from Arsenal by Max";
+_unit = _this select 0;
 
 comment "Remove existing items";
-removeAllWeapons (_this select 0);
-removeAllItems (_this select 0);
-removeAllAssignedItems (_this select 0);
-removeUniform (_this select 0);
-removeVest (_this select 0);
-removeBackpack (_this select 0);
-removeHeadgear (_this select 0);
-removeGoggles (_this select 0);
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
 
 comment "Add containers";
-(_this select 0) forceAddUniform "U_BG_Guerilla1_1";
+_unit forceAddUniform "U_BG_Guerilla1_1";
 
 comment "Add weapons";
 
 comment "Add items";
-(_this select 0) linkItem "ItemCompass";
-(_this select 0) linkItem "ItemWatch";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
 

@@ -87,6 +87,9 @@ END_TIME_BEACON = "BeaconInterval" call BIS_fnc_getParamValue;//30; //Interval o
 // Only spawn the function if the parameter is set to enable
 if (("Beacon" call BIS_fnc_getParamValue) == 1) then { execVM "beaconTimer.sqf"; };
 
+// Setup Survior
+_sl = [survivor1] execVM "survivorLoadout.sqf"
+
 
 serverInitialized = true;
 publicVariable "serverInitialized";
